@@ -2,25 +2,22 @@ function NumberExtension(){
 
 }
 NumberExtension.prototype.numbers = function(number) {
-	switch(number){
-		case 1:
-			return "um".length;
-			break;
-		case 2:
-			return "dois".length;
-			break;
-		case 3:
-			return "tres".length;
-			break;			
-		case 4:
-			return "quatro".length;
-			break;
-		case 5:
-			return "quatro".length;
-			break;
+	
+	var units = {
+		
+		  1:"um",
+		  2:"dois",
+		  3:"tres",
+		  4:"quatro",
+		  5:"cinco",
+		  6:"seis",
+		  7:"sete",
+		  8:"oito",
+		  9:"nove"			
+	}
 
-		default:
-			break;
+	if (units[number] != undefined){
+		return units[number].length;
 	}
 
 	// if (number === 1)

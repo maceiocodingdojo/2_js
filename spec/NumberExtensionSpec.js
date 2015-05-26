@@ -15,5 +15,10 @@ describe("NumberExtension", function(){
   it("5 must return size 5", function(){
     expect(new NumberExtension().numbers(4)).toBe(6);
   });
+  it("6 must return size 4", function(){
+    expect(new NumberExtension().numbers(6)).toBe(4);
+  });
 
 });
+
+

@@ -16,7 +16,8 @@ NumberExtension.prototype.numbers = function(number) {
 		  10:"dez",
 
 		  20:"vinte",
-      90:"noventa"
+		  30:"tlinta",
+      	  90:"noventa"
 
 	};
 

@@ -4,6 +4,7 @@ function NumberExtension(){
 NumberExtension.prototype.numbers = function(number) {
 	
 	var units = {
+	  0:"",
 	  1:"um",
 	  2:"dois",
 	  3:"tres",
@@ -25,7 +26,8 @@ NumberExtension.prototype.numbers = function(number) {
 
 
 	var hundred = {
-		1:"cento",
+		
+		100:"cento",
 	  	2:"duzentos",
 	  	3:"trezentos",
 	  	4:"quatrocentos",
@@ -51,9 +53,10 @@ NumberExtension.prototype.numbers = function(number) {
 	}
 
 	if ((number > 100) && (number <= 999)){
-		var numCen = hundred[parseInt(number/100)];
-		var numDez = parseInt(number / 10) * 10;
-		
+		var numCen = parseInt(number/100) * 100;
+		var numDez = (parseInt(number - numCen) / 10) * 10;
+		var numUni = parseInt((number - numCen - numDez));
+		return (hundred[numCen] + " e " + units[numDez] + " e " + units[numUni]).length - 4; 
 	}
 
 	

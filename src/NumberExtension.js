@@ -14,7 +14,10 @@ NumberExtension.prototype.numbers = function(number) {
 		  8:"oito",
 		  9:"nove",
 		  10:"dez",
-		  20:"vinte"
+
+		  20:"vinte",
+      90:"noventa"
+
 	};
 
 	if (units[number] != undefined){
@@ -22,8 +25,9 @@ NumberExtension.prototype.numbers = function(number) {
 	}
 
 	if ((number > 20) && (number < 100)){
-		numDez = (number / 10) * 10;
-		numUni = number % 10;
-		return units[numDez] + " e " + units[numUni].length - 2; 
+    
+		var numDez = parseInt(number / 10) * 10;
+		var numUni = number % 10;
+		return (units[numDez] + " e " + units[numUni]).length - 2; 
 	}
 }

@@ -31,6 +31,9 @@ describe("NumberExtension", function(){
   it("22 must return 10", function() {
   	expect(conversor.numbers(22)).toBe(10)
   })
+  it("99 must return 13", function() {
+  	expect(conversor.numbers(99)).toBe(12)
+  })
 
 });
 

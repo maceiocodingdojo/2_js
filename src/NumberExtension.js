@@ -23,6 +23,7 @@ NumberExtension.prototype.numbers = function(number) {
 
 	};
 
+
 	var hundred = {
 		1:"cento",
 	  	2:"duzentos",
@@ -46,13 +47,14 @@ NumberExtension.prototype.numbers = function(number) {
     
 		var numDez = parseInt(number / 10) * 10;
 		var numUni = number % 10;
+		return (units[numDez] + " e " + units[numUni]).length - 2; 
 	}
 
 	if ((number > 100) && (number <= 999)){
-		var numCen = hundred[parseInt(number/100)]
-	
+		var numCen = hundred[parseInt(number/100)];
+		var numDez = parseInt(number / 10) * 10;
+		
 	}
 
-	return (units[numDez] + " e " + units[numUni]).length - 2; 
-
+	
 }

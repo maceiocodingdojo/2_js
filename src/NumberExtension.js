@@ -39,7 +39,7 @@ NumberExtension.prototype.numbers = function(number) {
 
 	}
 
-	var extenso = "";
+//	var extenso = "";
 
 	if (units[number] != undefined){
 		return units[number].length;
@@ -56,7 +56,7 @@ NumberExtension.prototype.numbers = function(number) {
 		var numCen = parseInt(number/100) * 100;
 		var numDez = (parseInt(number - numCen) / 10) * 10;
 		var numUni = parseInt((number - numCen - numDez));
-		return (hundred[numCen] + " e " + units[numDez] + " e " + units[numUni]).length - 4; 
+		return (hundred[numCen] + " e " + units[numUni]).length - 4; 
 	}
 
 	

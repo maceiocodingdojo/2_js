@@ -42,7 +42,7 @@ describe("NumberExtension", function(){
   })
 
   it("101 must return ", function(){
-  	expect(conversor.numbers(101).toBe(101))
+  	expect(conversor.numbers(101)).toBe(8)
   })
   //it("129 must return ")
 

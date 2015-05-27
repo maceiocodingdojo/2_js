@@ -27,7 +27,7 @@ NumberExtension.prototype.numbers = function(number) {
 
 	var hundred = {
 		
-		100:"cento",
+		1:"cento",
 	  	2:"duzentos",
 	  	3:"trezentos",
 	  	4:"quatrocentos",
@@ -39,25 +39,22 @@ NumberExtension.prototype.numbers = function(number) {
 
 	}
 
-//	var extenso = "";
-
 	if (units[number] != undefined){
 		return units[number].length;
 	}
 
-	if ((number > 20) && (number < 100)){
-    
-		var numDez = parseInt(number / 10) * 10;
-		var numUni = number % 10;
-		return (units[numDez] + " e " + units[numUni]).length - 2; 
-	}
+	var extenso = "", tamanho = 0;
 
 	if ((number > 100) && (number <= 999)){
-		var numCen = parseInt(number/100) * 100;
-		var numDez = (parseInt(number - numCen) / 10) * 10;
-		var numUni = parseInt((number - numCen - numDez));
-		return (hundred[numCen] + " e " + units[numUni]).length - 4; 
+		var numCen = parseInt(number/100);
+		tamanho += (hundred[numCen]).length + 1;
 	}
 
 	
+	if ((number > 20) && (number < 100)){
+		var numDez = parseInt(number / 10) * 10;
+		tamanho += (units[numDez]).length + 1; 
+	}
+
+	return tamanho;	
 }

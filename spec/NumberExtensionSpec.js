@@ -41,6 +41,11 @@ describe("NumberExtension", function(){
   	expect(conversor.numbers(99)).toBe(12)
   })
 
+  it("101 must return ", function(){
+  	expect(conversor.numbers(101).toBe(101))
+  })
+  //it("129 must return ")
+
 });
 
 

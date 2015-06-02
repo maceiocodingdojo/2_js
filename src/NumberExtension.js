@@ -16,7 +16,6 @@ NumberExtension.prototype.numbers = function(number) {
 	};
 
 	if (simple[number] != undefined){
-		console.log(simple[number]);
 		return simple[number].length;
 	} else {
 
@@ -42,7 +41,17 @@ NumberExtension.prototype.numbers = function(number) {
 			size += simple[number];
 		}
 
-		console.log(size);
 		return size.length;
 	}		
+}
+
+NumberExtension.prototype.main = function(){
+	var total, i;
+	total = 0;
+	
+	for (i = 1; i <= 1000; i++) {
+		total += NumberExtension.prototype.numbers(i);
+	}
+
+	console.log(total);
 }

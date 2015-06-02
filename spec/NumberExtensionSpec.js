@@ -53,7 +53,25 @@ describe("NumberExtension", function(){
     it ("999 must return 26", function(){
       expect(conversor.numbers(999)).toBe("novecentosenoventaenove".length);
     });
- });
+  });
+
+  describe("count letters in a number range", function(){
+    it("2 to 3 must return 8", function(){
+      expect(conversor.main(2, 3)).toBe("doistres".length);
+    });
+
+    it("63 to 65 must return 42", function(){
+      expect(conversor.main(63, 65)).toBe("sessentaetressessentaequatrosessentaecinco".length);
+    });
+
+    it ("231 to 232 must return 38", function(){
+      expect(conversor.main(231, 232)).toBe("duzentosetrintaeumduzentosetrintaedois".length);
+    });
+
+    it("998 to 1000 must return 49", function(){
+      expect(conversor.main(998,1000)).toBe("novecentosenoventaeoitonovecentosenoventaenovemil".length);
+    });
+  });
 });
 
 

@@ -4,8 +4,8 @@ function NumberExtension(){
 NumberExtension.prototype.numbers = function(number) {
 	
 	var simple = {
-	  1:"um", 2:"dois", 3:"tres", 4:"quatro", 5:"cinco", 6:"seis", 7:"sete", 8:"oito", 9:"nove", 10:"dez",
-	  11:"onze", 12:"doze", 13:"treze", 14:"quatorze", 15:"quinze", 16:"dezesseis", 17:"dezessete",
+	  0: "zero", 1:"um", 2:"dois", 3:"tres", 4:"quatro", 5:"cinco", 6:"seis", 7:"sete", 8:"oito", 9:"nove",
+	  10:"dez", 11:"onze", 12:"doze", 13:"treze", 14:"quatorze", 15:"quinze", 16:"dezesseis", 17:"dezessete",
 	  18:"dezoito", 19:"dezenove", 20:"vinte", 30:"trinta", 40:"quarenta", 50:"cinquenta", 60:"sessenta",
 	  70:"setenta", 80:"oitenta", 90:"noventa", 100:"cem", 200:"duzentos", 300:"trezentos", 400:"quatrocentos", 
 	  500:"quinhentos", 600:"seiscentos", 700:"setecentos", 800:"oitocentos", 900:"novecentos", 1000:"mil"
@@ -45,13 +45,13 @@ NumberExtension.prototype.numbers = function(number) {
 	}		
 }
 
-NumberExtension.prototype.main = function(){
+NumberExtension.prototype.main = function(start, end){
 	var total, i;
 	total = 0;
 	
-	for (i = 1; i <= 1000; i++) {
+	for (i = start; i <= end; i++) {
 		total += NumberExtension.prototype.numbers(i);
 	}
 
-	console.log(total);
+	return total;
 }
